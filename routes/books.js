@@ -9,7 +9,13 @@ router.get("/list/:size/:index",(req, res)=>{
         offset:index*size,
         limit:size
     }).then(books=>{
-        res.status(200).json(books)
+        models.books.count().then(cnt=>{
+            res.status(200).json({
+                count:cnt,
+                datas:books
+            })
+        })
+        
     })
 })
 module.exports =  router;
