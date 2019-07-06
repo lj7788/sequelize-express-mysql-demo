@@ -1,0 +1,22 @@
+{
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }
+    ],
+    "buildpacks": [],
+    "env": {
+        "NODE_ENV": {
+            "description": "Run as a production environment on Heroku",
+            "value": "production",
+            "DB_USERNAME":"root",
+            "DB_PASSWORD":"root",
+            "DB_NAME":"mybookshop",
+            "DB_HOSTNAME":3306            
+        }
+        
+    },
+    "formation": {},
+    "name": "express-example",
+    "scripts": {}
+}
