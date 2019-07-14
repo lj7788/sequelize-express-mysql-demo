@@ -1,7 +1,8 @@
 /* jshint indent: 2 */
 'use strict';
+var userroles = require('./userroles');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('users', {
+  let users= sequelize.define('users', {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -60,6 +61,15 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     tableName: 'users',
-    timestamps:false
+    timestamps:false,
+    initialAutoIncrement:'1000'
   });
+  
+  //ORM中关系映射
+  users.associate=(models)=>{
+    models.users.belongsTo(models.userroles,{foreignKey:'userroleid'})
+    models.users.belongsTo(models.userstates,{foreignKey:'userstateid'})
+  }
+
+  return users
 };

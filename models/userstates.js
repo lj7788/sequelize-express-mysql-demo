@@ -14,9 +14,7 @@ module.exports = function(sequelize, DataTypes) {
       unique: true
     }
   }, {
-    tableName: 'userstates'
-    
-  },{
-    timestamps:false
+    tableName: 'userstates',
+    timestamps:false,    
   });
 };
