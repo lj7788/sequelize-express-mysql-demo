@@ -2,7 +2,7 @@
   "name": "sequelize_express_mysql_demo",
   "version": "0.1.0",
   "description": "sequelize express mysql demo",
-  "main": "./bin/www",  
+  "main": "./bin/www",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lj7788/sequelize-express-mysql-demo.git"

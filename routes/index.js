@@ -3,8 +3,6 @@ var fs        = require('fs');
 var path      = require('path');
 var basename  = path.basename(__filename);
 
-var routes = require('./main');
-var users  = require('./users');
 let routers={}
 fs.readdirSync(__dirname)
   .filter(file => {
